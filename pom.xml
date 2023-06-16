@@ -101,6 +101,10 @@
         -->
         <revision>develop-SNAPSHOT</revision>
 
+		<!-- Helps ensure build reproducibility (cf. https://maven.apache.org/guides/mini/guide-reproducible-builds.html) -->
+		<!--suppress UnresolvedMavenProperty -->
+		<project.build.outputTimestamp>${git.commit.timestamp.datetime}</project.build.outputTimestamp>
+
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
